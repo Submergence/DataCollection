@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="DataCollection:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>DataCollection</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="data.war">
+      <element id="artifact" artifact-name="DataCollection:war exploded" />
+    </root>
+  </artifact>
+</component>
