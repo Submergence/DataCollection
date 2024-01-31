@@ -18,6 +18,8 @@ A remotely connected machine serves as the remote desktop accessed by volunteers
 
 This website system is implemented using javaweb+docker+tomcat+guacamole+playwright to achieve the above functions.
 
+![流程图-202401312304](https://github.com/Submergence/DataCollection/assets/33412372/952d6e81-3ab0-4c3a-a0da-27921fc7f7cc)
+
 ### Workflow Principles
 
 1. When a volunteer enters the website and logs in, they can choose to start the test;
