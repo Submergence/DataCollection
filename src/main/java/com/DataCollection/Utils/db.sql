@@ -9,8 +9,6 @@ CREATE TABLE system_user (
 );
 INSERT INTO system_user (username, password, email) VALUES ('admin', 'admin', 'gengyfsjz@outlook.com');
 
-
-
 CREATE TABLE records (
     id INT AUTO_INCREMENT,
     container_id VARCHAR(20) NOT NULL, --
@@ -23,11 +21,3 @@ CREATE TABLE records (
     PRIMARY KEY (id)
 );
 ALTER TABLE records ADD test_url VARCHAR(255) NOT NULL;
-
-CREATE TABLE record(
-    id char(20) NOT NULL,
-    user_id INT NOT NULL,
-    port INT NOT NULL,
-    status INT NOT NULL default 0, #0运行中, 1已删除
-    PRIMARY KEY(id)
-)
