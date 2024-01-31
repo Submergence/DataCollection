@@ -3,6 +3,7 @@ package com.DataCollection.Web.Servlet;
 import com.DataCollection.Pojo.Record;
 import com.DataCollection.Service.Impl.BuildContainersImpl;
 import com.DataCollection.Utils.HostConfigReader;
+import com.DataCollection.Utils.Utils;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -49,16 +50,14 @@ public class BuildContainerServlet extends HttpServlet {
                 logger.info("Record building finished: " + record);
             }
 
-//        Utils utils = new Utils();
-//        String targetUri = "http://" + utils.getPublicIpAddress() + ":" + hostPort + "/tunnell-1";
-            String targetUri = "http://" + "localhost" + ":" + hostPort + "/tunnell-1";
+        Utils utils = new Utils();
+        String targetUri = "http://" + utils.getPublicIpAddress() + ":" + hostPort + "/tunnell-1";
             response.setContentType("text/plain");
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(targetUri);
         }catch(Exception e){
             e.printStackTrace();
 
-//            request.getSession().setAttribute("error_msg", "Error occurred while building the container: " + e.getMessage());
             String errorMessage = "Error occurred while building the container: " + e.getMessage();
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             response.setContentType("application/json");
