@@ -4,16 +4,16 @@ Users can open a link that will display a session of a custom browser capable of
 
 ## Dependencies
 
-- Java Development Kit (JDK) 8 or higher
-- Apache Maven
+- Java Development Kit (JDK) 8 or higher  
+- Apache Maven  
 - Apache Tomcat
 - Docker
 - MySQL
 
 ## Explanation
 
-A JavaWeb server is used to deploy the entire website system, referred to as Machine A below;
-A remote server acts as the Guacamole Server, referred to as Machine B below;
+A JavaWeb server is used to deploy the entire website system, referred to as Machine A below;  
+A remote server acts as the Guacamole Server, referred to as Machine B below;  
 A remotely connected machine serves as the remote desktop accessed by volunteers, referred to as Machine C below.
 
 This website system is implemented using javaweb+docker+tomcat+guacamole+playwright to achieve the above functions.
@@ -40,7 +40,7 @@ This website system is implemented using javaweb+docker+tomcat+guacamole+playwri
 
 ### Environment Deployment on Machine A
 
-Local environment: MacOS 14.2.1 (also compatible with Ubuntu22 and CentOS7.6+ systems, but note that ports 8080 and above need to be opened)
+Local environment: MacOS 14.2.1 (also compatible with Ubuntu22 and CentOS7.6+ systems, but note that ports 8080 and above need to be opened)  
 Deploy the entire javaweb on Machine A (using tomcat 8.5 and above). I currently default to listening on port 8081, with the context path as /data/. Volunteers can access the entry point of the website system via http://{A_hostname}:8081/data/.
 
 1. In docker, you need to pull the specified image from Docker Hub: submergence12138/guacamole_client5.0:latest;
@@ -50,9 +50,9 @@ Deploy the entire javaweb on Machine A (using tomcat 8.5 and above). I currently
 
 ### Environment Deployment on Machine B
 
-The deployment of Machine B is relatively simple, only providing the function of the Guacamole Server. It can also be deployed directly on Machine A locally. It is recommended to deploy both server (8080) and gucad (4822).
-The specific method can refer to the Guacamole official website. Docker deployment is recommended, which is very simple.
-Reference link: https://guacamole.apache.org/doc/gug/guacamole-docker.html
+The deployment of Machine B is relatively simple, only providing the function of the Guacamole Server. It can also be deployed directly on Machine A locally. It is recommended to deploy both server (8080) and gucad (4822).  
+The specific method can refer to the Guacamole official website. Docker deployment is recommended, which is very simple.  
+Reference link: https://guacamole.apache.org/doc/gug/guacamole-docker.html  
 
 ### Environment Deployment on Machine C
 
@@ -63,15 +63,16 @@ Reference link: https://guacamole.apache.org/doc/gug/guacamole-docker.html
 5. Install Nodejs and Playwright.
 
 ## Reference Links:
-https://guacamole.apache.org/doc/gug/introduction.html
+https://guacamole.apache.org/doc/gug/introduction.html  
 https://testingbot.com/support/playwright/recorder.html#introduction
+
 
 ## 中文
 ## 解释
 
-一台JavaWeb服务器用于部署整个网站系统，下文中带成为机器A；
-一台远程服务器作为Guacamole Server，下文中代称为机器B；
-一台远程连接的机器作为被志愿者访问的远程桌面，下文中代称为机器C；
+一台JavaWeb服务器用于部署整个网站系统，下文中带成为机器A；  
+一台远程服务器作为Guacamole Server，下文中代称为机器B；  
+一台远程连接的机器作为被志愿者访问的远程桌面，下文中代称为机器C；  
 
 这个网站系统是通过javaweb+docker+tomcat+guacamole+playwright实现了以上的功能。
 
@@ -96,8 +97,8 @@ https://testingbot.com/support/playwright/recorder.html#introduction
 
 
 ### 机器A的环境部署
-本机环境MacOS 14.2.1（此外在Ubuntu22和CentOS7.6+系统也兼容，但注意要打开8080及之后的端口）
-在机器A部署整个javaweb（使用tomcat8.5及以上版本即可），我目前默认监听8081端口，上下文路径为/data/，即志愿者可以通过http://{A_hostname}:8081/data/访问网站系统的入口。
+本机环境MacOS 14.2.1（此外在Ubuntu22和CentOS7.6+系统也兼容，但注意要打开8080及之后的端口）  
+在机器A部署整个javaweb（使用tomcat8.5及以上版本即可），我目前默认监听8081端口，上下文路径为/data/，即志愿者可以通过http://{A_hostname}:8081/data/访问网站系统的入口。  
 
 1. 在docker中您需要到docker hub拉取指定的镜像：submergence12138/guacamole_client5.0:latest；
 2. 安装mysql-server，默认需要创建对应的数据库和表，您也可以自行配置，所需的内容在src/main/java/com/DataCollection/Utils/db.sql；
@@ -105,9 +106,9 @@ https://testingbot.com/support/playwright/recorder.html#introduction
 4. 在src/main/resources/config.properties中你还需要配置上述提到的三个机器的ip和端口以及需要的测试网站的URL。
 
 ### 机器B的环境部署
-机器B的部署较简单，仅仅提供Guacamole Server的功能，也可以直接在机器A本地部署这个服务，建议将server（8080）和gucad（4822）都部署。
-具体方式可以参考Guacamole官网，推荐使用docker部署，十分简洁。
-参考链接：https://guacamole.apache.org/doc/gug/guacamole-docker.html
+机器B的部署较简单，仅仅提供Guacamole Server的功能，也可以直接在机器A本地部署这个服务，建议将server（8080）和gucad（4822）都部署。  
+具体方式可以参考Guacamole官网，推荐使用docker部署，十分简洁。  
+参考链接：https://guacamole.apache.org/doc/gug/guacamole-docker.html  
 
 ### 机器C的环境部署
 1. 由于机器C会被远程连接，所以需要安装图形化界面；
@@ -118,7 +119,7 @@ https://testingbot.com/support/playwright/recorder.html#introduction
 
 
 ## 参考链接：
-https://guacamole.apache.org/doc/gug/introduction.html
+https://guacamole.apache.org/doc/gug/introduction.html  
 https://testingbot.com/support/playwright/recorder.html#introduction
 
 
