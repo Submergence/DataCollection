@@ -1,6 +1,6 @@
-Data Collection System for Psychometric-type Experiments
+# Data Collection System for Psychometric-type Experiments
 
-users can open a link that will display a session of a custom browser capable of recording their browsing activities (clicks, scroll, etc).
+Users can open a link that will display a session of a custom browser capable of recording their browsing activities (clicks, scroll, etc).
 
 
 
@@ -62,6 +62,9 @@ users can open a link that will display a session of a custom browser capable of
 5. 安装Nodejs和Playwright。
 
 
+## 参考链接：
+https://guacamole.apache.org/doc/gug/introduction.html
+https://testingbot.com/support/playwright/recorder.html#introduction
 
 
 
